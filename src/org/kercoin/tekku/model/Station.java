@@ -1,11 +1,8 @@
-package org.kercoin.tekku.model;
+  package org.kercoin.tekku.model;
 
-import javax.vecmath.Point2d;
 
 import org.kercoin.tekku.util.EqualsHelper;
 import org.kercoin.tekku.util.Validator;
-
-
 
 /**
  * Station class represent a transport characteristic stop like a bus stop.
@@ -15,10 +12,8 @@ public class Station {
   
   /**
    * GPS location for this station.
-   * TODO : use a better class for represent a GPS location like 
-   * javax.microedition.location.Coordinates
    */
-  private Point2d location;
+  private Location location;
   
   /**
    * a free text to describe a Station.
@@ -30,7 +25,7 @@ public class Station {
    * Public default constructor
    * @param location GPS location for this station
    */
-  public Station(Point2d location) {
+  public Station(Location location) {
     Validator.notNull(location, "location cannot be null");
     this.location = location;
   }
@@ -40,7 +35,7 @@ public class Station {
    * @param location GPS location for this station
    * @param description description of this station
    */
-  public Station(Point2d location, String description) {
+  public Station(Location location, String description) {
     this(location);
     this.description = description;
   }
@@ -48,14 +43,14 @@ public class Station {
   /**
    * @return the location
    */
-  public Point2d getLocation() {
+  public Location getLocation() {
     return location;
   }
 
   /**
    * @param location the location to set
    */
-  public void setLocation(Point2d location) {
+  public void setLocation(Location location) {
     Validator.notNull(location, "location cannot be null");
     this.location = location;
   }
