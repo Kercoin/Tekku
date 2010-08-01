@@ -1,10 +1,11 @@
-package opt.git.tekku.model;
+package org.kercoin.tekku.model;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import opt.git.tekku.util.EqualsHelper;
-import opt.git.tekku.util.Validator;
+import org.kercoin.tekku.util.EqualsHelper;
+import org.kercoin.tekku.util.Validator;
+
 
 
 /**

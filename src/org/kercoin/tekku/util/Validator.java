@@ -1,4 +1,4 @@
-package opt.git.tekku.util;
+package org.kercoin.tekku.util;
 
 
 /**

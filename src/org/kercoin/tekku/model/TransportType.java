@@ -1,4 +1,4 @@
-package opt.git.tekku.model;
+package org.kercoin.tekku.model;
 
 
 /**

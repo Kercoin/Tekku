@@ -1,9 +1,10 @@
-package opt.git.tekku.model;
+package org.kercoin.tekku.model;
 
 import javax.vecmath.Point2d;
 
-import opt.git.tekku.util.EqualsHelper;
-import opt.git.tekku.util.Validator;
+import org.kercoin.tekku.util.EqualsHelper;
+import org.kercoin.tekku.util.Validator;
+
 
 
 /**
