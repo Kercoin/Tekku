@@ -12,16 +12,19 @@ Tekku project
  - cartographs
    - android
    - j2me
+
 2) Get the source
 -----------------
  - install git and clone official repository:
     git clone git://github.com/Kercoin/Tekku.git
  - download tarballs or zip archives from public http servers:
     http://prj.kercoin.org/p/tekku/downloads
+
 3) Get involved
 ---------------
  - read and amend official wiki
     http://prj.kercoin.org/p/tekku/wiki
+
 4) Licensing
 ------------
  Please read LICENSE file.
