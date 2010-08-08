@@ -1,0 +1,13 @@
+Tekku cartographs - Android version
+===================================
+
+Requirements
+------------
+API Level 3 (1.5+) representing 99.8% of active devices
+=> Full Android compatibility
+
+Install
+-------
+Cartographs are registered users. As long as the project is internally managed, apk won't be available at market.
+Apks will be part of the 'cartograph toolkit', which is distributed on cartograph approval.
+
