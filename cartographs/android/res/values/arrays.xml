@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string-array name="networks"><item>RATP (Ile-de-France)</item>
+<string-array name="networks">
+	<item>RATP (Ile-de-France)</item>
 </string-array>
 <string-array name="lines">
-<item>RER A</item>
-<item>RER B</item>
-<item>Metro 1</item>
-<item>Metro 2</item>
-<item>Metro 3</item>
-<item>Metro 4</item>
+	<item>RER A</item>
+	<item>RER B</item>
+	<item>Metro 1</item>
+	<item>Metro 2</item>
+	<item>Metro 3</item>
+	<item>Metro 4</item>
+</string-array>
+<string-array name="directions">
+	<item>Boissy-St-Léger</item>
+	<item> Marne-la-Vallée</item>
+	<item>Poissy</item>
+	<item>Cergy-le-haut</item>
+	<item>St-Germain-en-Laye</item>
+</string-array>
+<string-array name="stations">
+	<item>Auber</item>
+	<item>Châtelet-les-Halles</item>
+	<item>Gare de Lyon</item>
+	<item>Nation</item>
+	<item>Vincennes</item>
 </string-array>
 </resources>

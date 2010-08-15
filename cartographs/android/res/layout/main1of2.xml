@@ -3,11 +3,14 @@
  android:layout_height="fill_parent" android:layout_width="fill_parent"
      android:padding="7sp"
  >
+ <!-- Titres -->
  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
  	android:textStyle="bold" android:textSize="22sp"
  	android:text="@string/title" android:paddingBottom="14sp"/>
  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
- 	android:text="@string/carto_1of2" android:textSize="16sp" android:paddingBottom="7sp"/>
+ 	android:text="@string/carto_1of2" android:textSize="16sp" android:paddingBottom="21sp"/>
+ 	
+ <!-- Contenu -->
  <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent" android:gravity="center_vertical">
   <TextView android:text="Réseau" android:layout_width="fill_parent" android:textSize="16sp" android:gravity="center_vertical" android:layout_height="wrap_content" android:layout_weight="2.0"/>
   <Spinner android:id="@+id/network" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1.0"/>
@@ -17,10 +20,12 @@
   <Spinner android:id="@+id/line" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1.0"/>
  </LinearLayout>
  <LinearLayout android:orientation="horizontal"  android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1.0"></LinearLayout>
+ 
+ <!-- Boutons précédent/suivant  -->
  <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
   <Button
   	android:text="@string/btn_previous" android:id="@+id/btn_1of2_previous"
-  	android:textSize="16sp"	android:textStyle="bold"
+  	android:textSize="16sp"
   	android:visibility="invisible" 
   	android:layout_width="fill_parent" android:layout_height="70sp" android:layout_weight="1.0"
   	/>
