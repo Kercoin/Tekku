@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="description">Cartograph client for Tekku</string>
     <string name="hello">Hello World, Cartograph!</string>
     <string name="app_name">Tekku cartograph</string>
+    <string name="menu_option">Options</string>
+    <string name="title">Cartographe</string>
+    <string name="carto_1of2">Choix du parcours 1/2</string>
+    <string name="btn_previous">Retour</string>
+    <string name="btn_next">Suite</string>
 </resources>

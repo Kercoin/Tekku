@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="networks"><item>RATP (Ile-de-France)</item>
+</string-array>
+<string-array name="lines">
+<item>RER A</item>
+<item>RER B</item>
+<item>Metro 1</item>
+<item>Metro 2</item>
+<item>Metro 3</item>
+<item>Metro 4</item>
+</string-array>
+</resources>
