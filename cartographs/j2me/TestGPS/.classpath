@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="con" path="org.elipse.mtj.JavaMEContainer/Java(TM) Platform Micro Edition SDK 3.0/DefaultFxTouchPhone1"/>
+	<classpathentry exported="true" kind="lib" path="H:/Prog/mobile/LWUIT_1_2_1/LWUIT_1_2_1/lib/LWUIT.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/H:/Prog/mobile/LWUIT_1_2_1/LWUIT_1_2_1/docs/javadocs.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="classes"/>
+</classpath>
