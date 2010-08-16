@@ -4,12 +4,15 @@
     <string name="hello">Hello World, Cartograph!</string>
     <string name="app_name">Tekku cartograph</string>
     <string name="menu_option">Options</string>
+    <string name="menu_gps">GPS</string>
     <string name="title">Cartographe</string>
     <string name="carto_1of2">Choix du parcours 1/2</string>
     <string name="carto_2of2">Choix du parcours 2/2</string>
     <string name="btn_previous">&lt; Retour</string>
     <string name="btn_next">Suite &gt;</string>
     <string name="btn_go">Go!</string>
+    <string name="btn_mark">Marque</string>
+    <string name="btn_done">Terminé</string>
     <string name="direction">Direction</string>
     <string name="departure">Départ</string>
     <string name="arrival">Arrivée</string>

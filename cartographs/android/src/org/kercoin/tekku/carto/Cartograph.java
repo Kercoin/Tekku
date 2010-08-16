@@ -16,7 +16,6 @@ public class Cartograph extends Activity implements OnClickListener {
 	private transient ArrayAdapter<CharSequence> lineAdapter;
 
 	private transient ArrayAdapter<CharSequence> directionAdapter;
-	private transient ArrayAdapter<CharSequence> departureAdapter;
 	private transient ArrayAdapter<CharSequence> stationAdapter;
 	
     /** Called when the activity is first created. */
@@ -29,14 +28,12 @@ public class Cartograph extends Activity implements OnClickListener {
 	private void load1of2() {
 		setContentView(R.layout.main1of2);
 		if (networkAdapter == null)
-			networkAdapter = ArrayAdapter.createFromResource(
-				this, R.array.networks, android.R.layout.simple_spinner_item);
+			networkAdapter = createAdapter(R.array.networks);
 		Spinner network = (Spinner) findViewById(R.id.network);
 		network.setAdapter(networkAdapter);
 
 		if (lineAdapter == null)
-			lineAdapter = ArrayAdapter.createFromResource(
-				this, R.array.lines, android.R.layout.simple_spinner_item);
+			lineAdapter = createAdapter(R.array.lines);
 		Spinner line = (Spinner) findViewById(R.id.line);
 		line.setAdapter(lineAdapter);
 		
@@ -47,20 +44,14 @@ public class Cartograph extends Activity implements OnClickListener {
 	private void load2of2() {
 		setContentView(R.layout.main2of2);
 		if (directionAdapter == null)
-			directionAdapter = ArrayAdapter.createFromResource(
-				this, R.array.directions, android.R.layout.simple_spinner_item);
+			directionAdapter = createAdapter(R.array.directions);
 		Spinner direction = (Spinner) findViewById(R.id.direction);
 		direction.setAdapter(directionAdapter);
 		
-//		if (departureAdapter == null)
-//			departureAdapter = ArrayAdapter.createFromResource(
-//				this, R.array.stations, android.R.layout.simple_spinner_item);
+		if (stationAdapter == null)
+			stationAdapter = createAdapter(R.array.stations);
 		Spinner departure = (Spinner) findViewById(R.id.departure);
 		departure.setAdapter(stationAdapter);
-		
-		if (stationAdapter == null)
-			stationAdapter = ArrayAdapter.createFromResource(
-				this, R.array.stations, android.R.layout.simple_spinner_item);
 		Spinner arrival = (Spinner) findViewById(R.id.arrival);
 		arrival.setAdapter(stationAdapter);
 		
@@ -69,12 +60,21 @@ public class Cartograph extends Activity implements OnClickListener {
 		Button go = (Button) findViewById(R.id.btn_2of2_go);
 		go.setOnClickListener(this);
 	}
+
+	private ArrayAdapter<CharSequence> createAdapter(int array) {
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+			this, array, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		return adapter;
+	}
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     	boolean superResult = super.onCreateOptionsMenu(menu);
     	MenuItem option = menu.add(R.string.menu_option);
     	option.setIcon(android.R.drawable.ic_menu_preferences);
+    	MenuItem gps = menu.add(R.string.menu_gps);
+    	gps.setIcon(android.R.drawable.ic_menu_compass);
 		return superResult;
     }
 

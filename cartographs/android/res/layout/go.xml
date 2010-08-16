@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:padding="7sp"
+	android:layout_height="fill_parent" android:layout_width="fill_parent">
+<RelativeLayout
+  android:id="@+id/go_root"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:padding="14sp" android:layout_weight="1.0">
+  <TextView android:id="@+id/gps_quality" android:text="GPS "
+  	android:textSize="16sp"
+  android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentRight="true"/>
+  <TextView android:id="@+id/gsm_info" android:text="GSM "
+  	android:textSize="16sp"
+  android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+
+<LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent" android:drawableTop="#CCCCCC" >
+  <Button
+  	android:text="@string/btn_mark" android:id="@+id/btn_measure_mark"
+  	android:textSize="16sp"
+  	android:layout_width="fill_parent" android:layout_height="70sp" android:layout_weight="1.0"
+  	/>
+  <Button
+  	android:text="@string/btn_done" android:id="@+id/btn_measure_done"
+  	android:textSize="16sp"	android:textStyle="bold" 
+  	android:layout_width="fill_parent" android:layout_height="70sp" android:layout_weight="1.0"
+  	/>
+</LinearLayout>
+
+</LinearLayout>
