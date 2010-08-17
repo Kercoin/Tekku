@@ -22,7 +22,9 @@
  <LinearLayout android:orientation="horizontal"  android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="1.0"></LinearLayout>
  
  <!-- Boutons précédent/suivant  -->
- <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
+ <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent"
+  android:paddingTop="2sp">
+  <!-- android:background="@android:drawable/bottom_bar" -->
   <Button
   	android:text="@string/btn_previous" android:id="@+id/btn_1of2_previous"
   	android:textSize="16sp"

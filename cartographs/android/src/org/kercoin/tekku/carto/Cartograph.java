@@ -1,16 +1,23 @@
 package org.kercoin.tekku.carto;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class Cartograph extends Activity implements OnClickListener {
+public class Cartograph extends Activity implements OnClickListener, OnMenuItemClickListener {
+	
+	private static final int OPTION = 0x01;
+	private static final int GPS = 0x02;
 	
 	private transient ArrayAdapter<CharSequence> networkAdapter;
 	private transient ArrayAdapter<CharSequence> lineAdapter;
@@ -60,7 +67,7 @@ public class Cartograph extends Activity implements OnClickListener {
 		Button go = (Button) findViewById(R.id.btn_2of2_go);
 		go.setOnClickListener(this);
 	}
-
+	
 	private ArrayAdapter<CharSequence> createAdapter(int array) {
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 			this, array, android.R.layout.simple_spinner_item);
@@ -71,10 +78,11 @@ public class Cartograph extends Activity implements OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     	boolean superResult = super.onCreateOptionsMenu(menu);
-    	MenuItem option = menu.add(R.string.menu_option);
+    	MenuItem option = menu.add(Menu.NONE, OPTION, Menu.NONE, R.string.menu_option);
     	option.setIcon(android.R.drawable.ic_menu_preferences);
-    	MenuItem gps = menu.add(R.string.menu_gps);
+    	MenuItem gps = menu.add(Menu.NONE, GPS, Menu.NONE, R.string.menu_gps);
     	gps.setIcon(android.R.drawable.ic_menu_compass);
+    	gps.setOnMenuItemClickListener(this);
 		return superResult;
     }
 
@@ -88,14 +96,23 @@ public class Cartograph extends Activity implements OnClickListener {
 			load1of2();
 			break;
 		case R.id.btn_2of2_go:
-			go();
+			startActivity(new Intent(this, Measure.class));
 			break;
 		}
 	}
 
-	private void go() {
-		// TODO Auto-generated method stub
-		
+	@Override
+	public boolean onMenuItemClick(MenuItem item) {
+		switch (item.getItemId()) {
+		case GPS:
+			Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS); 
+	        startActivity(intent); 
+			break;
+		case OPTION:
+			Log.i("Tekku", "Options");
+			break;
+		}
+		return false;
 	}
 		
 }

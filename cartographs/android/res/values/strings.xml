@@ -16,4 +16,10 @@
     <string name="direction">Direction</string>
     <string name="departure">Départ</string>
     <string name="arrival">Arrivée</string>
+
+    <string name="measure_service_label">Accès au cartographe</string>
+    <string name="measure_service_started">Cartographie en cours</string>
+    <string name="measure_service_stopped">Cartographie interrompue.</string>
+    <string name="measure_service_connected">Service de cartographie connecté.</string>
+    <string name="measure_service_disconnected">Service de cartographie déconnecté.</string>
 </resources>

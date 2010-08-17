@@ -13,6 +13,14 @@
   <TextView android:id="@+id/gsm_info" android:text="GSM "
   	android:textSize="16sp"
   android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentLeft="true"/>
+  <TextView android:id="@+id/location"
+  	android:text="-"
+  	android:layout_height="wrap_content" android:layout_width="wrap_content"
+  	android:layout_centerHorizontal="true" android:layout_below="@+id/gps_quality" />
+  <TextView android:id="@+id/accuracy"
+  	android:text="-"
+  	android:layout_height="wrap_content" android:layout_width="wrap_content"
+  	android:layout_centerHorizontal="true" android:layout_below="@+id/location" />
 </RelativeLayout>
 
 <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent" android:drawableTop="#CCCCCC" >

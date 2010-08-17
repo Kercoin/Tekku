@@ -20,20 +20,22 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int arrival=0x7f06000b;
-        public static final int btn_1of2_next=0x7f060008;
-        public static final int btn_1of2_previous=0x7f060007;
-        public static final int btn_2of2_go=0x7f06000d;
-        public static final int btn_2of2_previous=0x7f06000c;
-        public static final int btn_measure_done=0x7f060004;
-        public static final int btn_measure_mark=0x7f060003;
-        public static final int departure=0x7f06000a;
-        public static final int direction=0x7f060009;
+        public static final int accuracy=0x7f060004;
+        public static final int arrival=0x7f06000d;
+        public static final int btn_1of2_next=0x7f06000a;
+        public static final int btn_1of2_previous=0x7f060009;
+        public static final int btn_2of2_go=0x7f06000f;
+        public static final int btn_2of2_previous=0x7f06000e;
+        public static final int btn_measure_done=0x7f060006;
+        public static final int btn_measure_mark=0x7f060005;
+        public static final int departure=0x7f06000c;
+        public static final int direction=0x7f06000b;
         public static final int go_root=0x7f060000;
         public static final int gps_quality=0x7f060001;
         public static final int gsm_info=0x7f060002;
-        public static final int line=0x7f060006;
-        public static final int network=0x7f060005;
+        public static final int line=0x7f060008;
+        public static final int location=0x7f060003;
+        public static final int network=0x7f060007;
     }
     public static final class layout {
         public static final int go=0x7f030000;
@@ -54,6 +56,11 @@ public final class R {
         public static final int description=0x7f050000;
         public static final int direction=0x7f05000d;
         public static final int hello=0x7f050001;
+        public static final int measure_service_connected=0x7f050013;
+        public static final int measure_service_disconnected=0x7f050014;
+        public static final int measure_service_label=0x7f050010;
+        public static final int measure_service_started=0x7f050011;
+        public static final int measure_service_stopped=0x7f050012;
         public static final int menu_gps=0x7f050004;
         public static final int menu_option=0x7f050003;
         public static final int title=0x7f050005;
