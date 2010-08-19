@@ -105,12 +105,11 @@ public class Cartograph extends Activity implements OnClickListener, OnMenuItemC
 	public boolean onMenuItemClick(MenuItem item) {
 		switch (item.getItemId()) {
 		case GPS:
-			Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS); 
-	        startActivity(intent); 
-			break;
+			startActivity(new Intent(Settings.ACTION_SECURITY_SETTINGS)); 
+			return true;
 		case OPTION:
 			Log.i("Tekku", "Options");
-			break;
+			return true;
 		}
 		return false;
 	}
