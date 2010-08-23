@@ -56,6 +56,8 @@ public final class R {
         public static final int description=0x7f050000;
         public static final int direction=0x7f05000d;
         public static final int hello=0x7f050001;
+        public static final int measure_accuracy_display=0x7f050016;
+        public static final int measure_location_display=0x7f050015;
         public static final int measure_service_connected=0x7f050013;
         public static final int measure_service_disconnected=0x7f050014;
         public static final int measure_service_label=0x7f050010;

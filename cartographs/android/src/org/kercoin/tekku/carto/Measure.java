@@ -1,5 +1,7 @@
 package org.kercoin.tekku.carto;
 
+import java.util.Locale;
+
 import org.kercoin.tekku.carto.MeasureService.GPSQuality;
 import org.kercoin.tekku.carto.MeasureService.GSMQuality;
 import org.kercoin.tekku.carto.MeasureService.MeasureServiceListener;
@@ -25,7 +27,7 @@ public class Measure extends Activity implements MeasureServiceListener, OnClick
 	private TextView gpsQuality;
 	private Button mark;
 
-	@Override
+	@Override // Activity
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		load();
@@ -91,31 +93,40 @@ public class Measure extends Activity implements MeasureServiceListener, OnClick
 	    }
 	}
 
-	@Override
+	@Override // Activity
 	protected void onDestroy() {
 	    super.onDestroy();
 	    doUnbindService();
 	}
 
-	@Override
+	@Override // MeasureServiceListener
 	public void updateGSMQuality(GSMQuality q) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
-	public void updateGPSQuality(GPSQuality q) {
-		this.gpsQuality.setText("GPS: " + q.name());
-		this.mark.setEnabled(GPSQuality.TOP.equals(q));
-	}
-	
-	@Override
-	public void locationChanged(Location location) {
-		locationTV.setText(location.getLatitude() + " " + location.getLongitude());
-		accuracyTV.setText(location.getAccuracy() + "m");
 	}
 
-	@Override
+	private transient GPSQuality _gpsQuality = null;
+	
+	@Override // MeasureServiceListener
+	public void updateGPSQuality(GPSQuality q) {
+		if ( q != _gpsQuality) {
+			this._gpsQuality = q;
+			this.gpsQuality.setText("GPS: " + q.name());
+			this.mark.setEnabled(GPSQuality.TOP.equals(q));
+		}
+	}
+	
+	private String prettyPrint(int res, Object... args) {
+		return String.format(Locale.US, getText(res).toString(), args);
+	}
+	
+	@Override // MeasureServiceListener
+	public void locationChanged(Location location) {
+		String $location = prettyPrint(R.string.measure_location_display, location.getLatitude(), location.getLongitude());
+		String $accuracy = prettyPrint(R.string.measure_accuracy_display, location.getAccuracy());
+		locationTV.setText($location);
+		accuracyTV.setText($accuracy);
+	}
+
+	@Override // OnClickListener
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_measure_done:

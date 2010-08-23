@@ -22,4 +22,6 @@
     <string name="measure_service_stopped">Cartographie interrompue.</string>
     <string name="measure_service_connected">Service de cartographie connecté.</string>
     <string name="measure_service_disconnected">Service de cartographie déconnecté.</string>
+    <string name="measure_location_display">%.5f - %.5f</string>
+    <string name="measure_accuracy_display">%.2fm</string>
 </resources>

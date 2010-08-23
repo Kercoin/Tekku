@@ -121,25 +121,23 @@ public class MeasureService extends Service implements LocationListener, Listene
 
 	@Override
 	public void onLocationChanged(Location location) {
-		fireNewLocation(location);
 		GPSQuality q = GPSQuality.BAD;
 		if (location.getAccuracy() < BEST) {
 			q = GPSQuality.TOP;
 		} else if (location.getAccuracy() < MEDIUM){
 			q = GPSQuality.MEDIUM;
 		}
-		fireGPSQuality(q);
+		fire(location, q);
 	}
 
-	private void fireNewLocation(Location location) {
-		for(MeasureServiceListener l : listeners) {
-			l.locationChanged(location);
-		}
-	}
-	
-	private void fireGPSQuality(GPSQuality q) {
-		for (MeasureServiceListener l : listeners) {
-			l.updateGPSQuality(q);
+	private void fire(Location location, GPSQuality q) {
+		if (location != null || q != null) {
+			for (MeasureServiceListener l : listeners) {
+				if (location != null)
+					l.locationChanged(location);
+				if (q != null)
+					l.updateGPSQuality(q);
+			}
 		}
 	}
 
