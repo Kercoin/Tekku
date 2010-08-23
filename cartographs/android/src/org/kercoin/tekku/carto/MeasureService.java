@@ -32,6 +32,10 @@ public class MeasureService extends Service implements LocationListener, Listene
 		void updateGSMQuality(GSMQuality q);
 		void locationChanged(Location location);
 	}
+
+	private static final float BEST = 10f;
+
+	private static final float MEDIUM = 20f;
 	
 	private LocationManager locationManager;
 	private NotificationManager notificationManager;
@@ -118,11 +122,24 @@ public class MeasureService extends Service implements LocationListener, Listene
 	@Override
 	public void onLocationChanged(Location location) {
 		fireNewLocation(location);
+		GPSQuality q = GPSQuality.BAD;
+		if (location.getAccuracy() < BEST) {
+			q = GPSQuality.TOP;
+		} else if (location.getAccuracy() < MEDIUM){
+			q = GPSQuality.MEDIUM;
+		}
+		fireGPSQuality(q);
 	}
 
 	private void fireNewLocation(Location location) {
 		for(MeasureServiceListener l : listeners) {
 			l.locationChanged(location);
+		}
+	}
+	
+	private void fireGPSQuality(GPSQuality q) {
+		for (MeasureServiceListener l : listeners) {
+			l.updateGPSQuality(q);
 		}
 	}
 

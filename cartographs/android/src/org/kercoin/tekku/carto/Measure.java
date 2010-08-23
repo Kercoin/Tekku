@@ -22,6 +22,7 @@ public class Measure extends Activity implements MeasureServiceListener, OnClick
 
 	private TextView accuracyTV;
 	private TextView locationTV;
+	private TextView gpsQuality;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class Measure extends Activity implements MeasureServiceListener, OnClick
 		done.setOnClickListener(this);
 		locationTV = (TextView) findViewById(R.id.location);
 		accuracyTV = (TextView) findViewById(R.id.accuracy);
+		gpsQuality = (TextView) findViewById(R.id.gps_quality);
 	}
 	
 	private MeasureService mBoundService;
@@ -101,8 +103,7 @@ public class Measure extends Activity implements MeasureServiceListener, OnClick
 	
 	@Override
 	public void updateGPSQuality(GPSQuality q) {
-		// TODO Auto-generated method stub
-		
+		this.gpsQuality.setText("GPS: " + q.name());
 	}
 	
 	@Override
