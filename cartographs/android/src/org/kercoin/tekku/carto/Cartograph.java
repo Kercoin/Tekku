@@ -29,7 +29,12 @@ public class Cartograph extends Activity implements OnClickListener, OnMenuItemC
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        load1of2();
+    }
+    
+    @Override
+    protected void onRestart() {
+    	super.onRestart();
+    	load1of2();
     }
 
 	private void load1of2() {
