@@ -1,2 +1,6 @@
 *.class
+
+# Specific to android cartograph:
 /cartographs/android/bin
+/cartographs/android/local.properties
+
